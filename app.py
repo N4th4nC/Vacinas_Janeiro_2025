@@ -59,7 +59,17 @@ with col1:
         scope="south america"
     )
     fig_map.update_geos(fitbounds="locations", visible=False)
-    fig_map.update_layout(margin=dict(t=0, b=0), template="plotly_dark")
+    fig_map.update_layout(margin=dict(t=0, b=0),
+    plot_bgcolor="rgba(0,0,0,0)",  # Fundo do gráfico transparente
+    paper_bgcolor="rgba(0,0,0,0)",  # Fundo geral do gráfico transparente
+    geo=dict(
+        lakecolor="rgba(255, 255, 255, 0)",  # Fundo do mapa (para áreas sem dados) transparente
+        projection_type="mercator",           # Tipo de projeção do mapa
+        bgcolor="rgba(0, 0, 0, 0)",          # Cor de fundo do mapa (transparente)
+        showland=True,                        # Mostrar a terra
+        landcolor="rgba(255, 255, 255, 0)"   # Cor da terra transparente
+    )
+)
     st.plotly_chart(fig_map, use_container_width=True)
 
 with col2:
