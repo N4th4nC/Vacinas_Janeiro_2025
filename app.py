@@ -38,7 +38,7 @@ estado_selecionado = st.sidebar.selectbox("Selecione o estado", estados)
 # ---------------------------
 # Título
 # ---------------------------
-st.title("Painel de Vacinação no Brasil")
+st.title("💉Painel de Vacinação no Brasil")
 
 # ---------------------------
 # Linha 1: Mapa + Donuts
